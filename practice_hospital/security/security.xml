@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Hospital App Category -->
+    <record id="module_category_hospital" model="ir.module.category">
+        <field name="name">Hospital</field>
+        <field name="sequence">1</field>
+    </record>
+
+    <!-- Hospital Admin Group -->
+    <record id="group_hospital_admin" model="res.groups">
+        <field name="name">Admin</field>
+        <field name="category_id" ref="practice_hospital.module_category_hospital"/>
+        <field name="comment">This is Hospital Admin Group</field>
+    </record>
+
+    <!-- Hospital Doctor Group -->
+    <record id="group_hospital_doctor" model="res.groups">
+        <field name="name">Doctor</field>
+        <field name="category_id" ref="practice_hospital.module_category_hospital"/>
+        <field name="comment">This is Doctor Group</field>
+    </record>
+</odoo>

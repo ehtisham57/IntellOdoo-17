@@ -1,0 +1,52 @@
+<odoo>
+
+    <!--    action  Patient-->
+    <record id="action_patient" model="ir.actions.act_window">
+        <field name="name">Patient</field>
+        <field name="res_model">hos.patient</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!--  main doctor  action -->
+    <record id="action_doctor" model="ir.actions.act_window">
+        <field name="name">Doctor</field>
+        <field name="res_model">my.doctor</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_doctor_search"/>
+    </record>
+
+    <!--    action Specialization-->
+    <record id="action_specialization" model="ir.actions.act_window">
+        <field name="name">Specialization</field>
+        <field name="res_model">doctor.specialization</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Root menu -->
+    <menuitem
+            id="menu_hospital"
+            name="Hospital For Practice"
+            web_icon="practice,static/description/icon.png"/>
+
+    <!--    menu Patient-->
+    <menuitem id="menu_patient"
+              name="Patient"
+              parent="menu_hospital"
+              action="action_patient"/>
+
+
+    <!--    menu Specialization-->
+    <menuitem id="menu_dr_specialization"
+              name="Specialization"
+              parent="menu_hospital"
+              action="action_specialization"/>
+
+
+    <!--  main doctor  menu -->
+    <menuitem id="menu_doctor"
+              name="Doctors"
+              parent="menu_hospital"
+              action="action_doctor"/>
+
+
+</odoo>

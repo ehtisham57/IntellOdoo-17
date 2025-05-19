@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!-- Form View -->
+
+    <record id="view_teacher_form" model="ir.ui.view">
+        <field name="name">teacher.form</field>
+        <field name="model">my.teacher</field>
+        <field name="arch" type="xml">
+            <form string="Teacher">
+                <header>
+                    <button name="action_primary" type="object" string="Primary" class="oe_highlight"/>
+                    <button name="action_secondary" type="object" string="Secondary" class="oe_highlight"/>
+                    <button name="action_h_secondary" type="object" string="Higher Secondary" class="oe_highlight"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="gender"/>
+                        <!--<field name="subject_id"/>-->
+                    </group>
+                    <notebook>
+                        <page string="Subjects">
+                            <field name="subject_id">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="code"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <field name="type_teacher" widget="statusbar" options="{'clickable': '1'}"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree View -->
+
+    <record id="view_teacher_tree" model="ir.ui.view">
+        <field name="name">teacher.tree</field>
+        <field name="model">my.teacher</field>
+        <field name="arch" type="xml">
+            <tree string="Teacher List">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="gender"/>
+                <field name="subject_id"/>
+                <field name="type_teacher"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action for Primary Teachers -->
+    <record id="action_primary_teacher" model="ir.actions.act_window">
+        <field name="name">Primary Teachers</field>
+        <field name="res_model">my.teacher</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('type_teacher', '=', 'primary')]</field>
+    </record>
+
+    <menuitem id="primary_teacher"
+              name="Primary Teachers"
+              parent="menu_teachers"
+              action="action_primary_teacher"/>
+
+    <!-- Action for Secondary Teachers -->
+    <record id="action_secondary_teacher" model="ir.actions.act_window">
+        <field name="name">Secondary Teachers</field>
+        <field name="res_model">my.teacher</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('type_teacher', '=', 'secondary')]</field>
+    </record>
+
+    <menuitem id="secondary_teacher"
+              name="Secondary Teachers"
+              parent="menu_teachers"
+              action="action_secondary_teacher"/>
+
+
+    <!-- Action for Higher Secondary Teachers -->
+    <record id="action_h_sec_teacher" model="ir.actions.act_window">
+        <field name="name">Higher Secondary Teachers</field>
+        <field name="res_model">my.teacher</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('type_teacher', '=', 'h_secondary')]</field>
+    </record>
+
+    <menuitem id="h_sec_teacher"
+              name="Higher Secondary Teachers"
+              parent="menu_teachers"
+              action="action_h_sec_teacher"/>
+
+    <!-- Teacher menu Action -->
+    <record id="action_teacher" model="ir.actions.act_window">
+        <field name="name">Teacher</field>
+        <field name="res_model">my.teacher</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- Teachers Menu -->
+    <menuitem id="menu_teachers"
+              name="Teachers"
+              parent="menu_school_root"
+              action="action_teacher"/>
+
+</odoo>

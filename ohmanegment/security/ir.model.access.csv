@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_my_student,access_my_student,model_my_student,ohmanegment.group_school_student,1,0,0,0
+access_my_teacher,access_my_teacher,model_my_teacher,ohmanegment.group_school_student,1,0,0,0
+access_my_subject,access_my_subject,model_my_subject,ohmanegment.group_school_student,1,0,0,0
+access_my_subject_line,access_my_subject_line,model_my_subject_line,ohmanegment.group_school_student,1,0,0,0
+access_student_fee_update_wizard,access_student_fee_update_wizard,model_student_fee_update_wizard,ohmanegment.group_school_student,1,0,0,0
+
+access_my_student,access_my_student,model_my_student,ohmanegment.group_school_manager,1,1,1,1
+access_my_teacher,access_my_teacher,model_my_teacher,ohmanegment.group_school_manager,1,1,1,1
+access_my_subject,access_my_subject,model_my_subject,ohmanegment.group_school_manager,1,1,1,1
+access_my_subject_line,access_my_subject_line,model_my_subject_line,ohmanegment.group_school_manager,1,1,1,1
+access_student_fee_update_wizard,access_student_fee_update_wizard,model_student_fee_update_wizard,ohmanegment.group_school_manager,1,1,1,1

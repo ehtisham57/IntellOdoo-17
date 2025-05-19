@@ -1,0 +1,7 @@
+<odoo>
+    <!-- Root menu -->
+    <menuitem
+        id="menu_school_root"
+        name="School Management"
+        web_icon="ohmanegment,static/description/icon.png"/>
+</odoo>
