@@ -17,14 +17,15 @@
                     </group>
                     <notebook>
                         <page string="Gender">
-
-                            <field name="gender" readonly="state == 'done'"/>
-
+                            <group>
+                                <field name="gender" readonly="state == 'done'"/>
+                            </group>
                         </page>
                         <page string="Select Doctor">
-
-                            <field name="doctor_id" readonly="state == 'done'" widget="Many2one"/>
-                            <field name="selected_dr_timing" readonly="state == 'done'"/>
+                            <group>
+                                <field name="doctor_id" readonly="state == 'done'" widget="Many2one"/>
+                                <field name="selected_dr_timing" readonly="state == 'done'"/>
+                            </group>
                         </page>
                     </notebook>
                 </sheet>

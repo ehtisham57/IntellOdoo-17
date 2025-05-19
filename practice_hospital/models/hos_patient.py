@@ -46,7 +46,7 @@ class Patient(models.Model):
     def _check_age_not_zero(self):
         for rec in self:
             if rec.age <= 0:
-                raise ValidationError("Age cannot be zero.")
+                raise ValidationError("Please Enter a valid age.....")
 
     def unlink(self):
         for rec in self:

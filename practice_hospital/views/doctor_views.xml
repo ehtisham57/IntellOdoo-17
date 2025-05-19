@@ -15,10 +15,14 @@
                     </group>
                     <notebook>
                         <page string="Gender">
-                            <field name="gender"/>
+                            <group>
+                                <field name="gender"/>
+                            </group>
                         </page>
                         <page string="Doctor Duty Time">
-                            <field name="doctor_timing"/>
+                            <group>
+                                <field name="doctor_timing"/>
+                            </group>
                         </page>
                         <page string="Patient Of This Doctor">
                             <field name="patient_ids">
@@ -67,6 +71,4 @@
             </search>
         </field>
     </record>
-
-
 </odoo>
