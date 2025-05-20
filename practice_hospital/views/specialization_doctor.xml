@@ -8,7 +8,8 @@
             <form string="Patient">
                 <sheet>
                     <field name="name"/>
-                    <field name="doctor_ids"/>
+                    <field name="doctor_ids" widget="many2many_tags"/>
+                    <field name="doctor_id"/>
                 </sheet>
             </form>
         </field>
@@ -22,10 +23,16 @@
 
             <tree string="Specialization List">
                 <field name="name"/>
+                <field name="doctor_id"/>  <!-- ✅ This line is required -->
                 <field name="doctor_ids"/>
             </tree>
-
-
         </field>
+    </record>
+
+    <!--    action Specialization-->
+    <record id="action_specialization" model="ir.actions.act_window">
+        <field name="name">Specialization</field>
+        <field name="res_model">doctor.specialization</field>
+        <field name="view_mode">tree,form</field>
     </record>
 </odoo>

@@ -20,7 +20,6 @@ class Doctor(models.Model):
         ('night', 'from 12am to 8am'),
     ], string='Doctor timing in the hospital')
 
-    specialization_ids = fields.Many2many('doctor.specialization', inverse_name='doctor_ids', string="Specializations")
+    specialization_ids = fields.Many2many('doctor.specialization', string="Specializations")
 
     patient_ids = fields.One2many('hos.patient', 'doctor_id', string="Patients")
-

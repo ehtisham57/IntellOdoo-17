@@ -9,11 +9,10 @@
     'data': [
         'security/ir.model.access.csv',
         'security/security.xml',
+        'views/menu.xml',
         'views/doctor_views.xml',
         'views/specialization_doctor.xml',
         'views/patient_appointment.xml',
-        'views/menu.xml',
-
     ],
     'installable': True,
     'application': True,

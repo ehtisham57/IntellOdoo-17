@@ -58,5 +58,11 @@
         </field>
     </record>
 
+    <!--    action  Patient-->
+    <record id="action_patient" model="ir.actions.act_window">
+        <field name="name">Patient</field>
+        <field name="res_model">hos.patient</field>
+        <field name="view_mode">tree,form</field>
+    </record>
 
 </odoo>

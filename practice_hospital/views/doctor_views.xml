@@ -71,4 +71,12 @@
             </search>
         </field>
     </record>
+
+    <!--  main doctor  action -->
+    <record id="action_doctor" model="ir.actions.act_window">
+        <field name="name">Doctor</field>
+        <field name="res_model">my.doctor</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_doctor_search"/>
+    </record>
 </odoo>
