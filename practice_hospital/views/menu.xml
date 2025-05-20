@@ -10,18 +10,24 @@
     <menuitem id="menu_patient"
               name="Patient"
               parent="menu_hospital"
-              action="action_patient"/>
+              action="action_patient"
+              sequence="1"
+    />
 
     <!--    menu Specialization-->
     <menuitem id="menu_dr_specialization"
               name="Specialization"
               parent="menu_hospital"
-              action="action_specialization"/>
+              action="action_specialization"
+              sequence="3"
+    />
 
     <!--  main doctor  menu -->
     <menuitem id="menu_doctor"
               name="Doctors"
               parent="menu_hospital"
-              action="action_doctor"/>
+              action="action_doctor"
+              sequence="2"
+    />
 
 </odoo>

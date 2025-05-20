@@ -4,18 +4,20 @@ from odoo import models, fields, api
 class Student(models.Model):
     _name = 'my.student'
     _description = 'Student Record'
+    _inherit = 'hos.person'
 
-    name = fields.Char(string="Name", required=True)
-    age = fields.Integer(string="Age")
+    # name = fields.Char(string="Name", required=True)
+    # age = fields.Integer(string="Age")
+    # gender = fields.Selection([
+    #     ('male', 'Male'),
+    #     ('female', 'Female'),
+    #     ('other', 'Other'),
+    # ], string='Gender')
+
     class_name = fields.Char(string="Class")
     section = fields.Selection([
         ('a', 'A'), ('b', 'B'), ('c', 'C'),
     ])
-    gender = fields.Selection([
-        ('male', 'Male'),
-        ('female', 'Female'),
-        ('other', 'Other'),
-    ], string='Gender')
 
     subject_ids = fields.Many2many('my.subject', 'subject_id')
     subject_line_ids = fields.One2many('my.subject.line', 'student_id', string='Subjects')

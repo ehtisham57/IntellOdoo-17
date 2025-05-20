@@ -4,13 +4,14 @@ from odoo import models, fields, api
 class Teacher(models.Model):
     _name = 'my.teacher'
     _description = 'Teacher Record'
+    _inherit = 'hos.person'
 
-    name = fields.Char(string="Name", required=True)
-    gender = fields.Selection([
-        ('male', 'Male'),
-        ('female', 'Female'),
-        ('other', 'Other'),
-    ], string='Gender')
+    # name = fields.Char(string="Name", required=True)
+    # gender = fields.Selection([
+    #     ('male', 'Male'),
+    #     ('female', 'Female'),
+    #     ('other', 'Other'),
+    # ], string='Gender')
 
     type_teacher = fields.Selection([
         ('primary', 'Primary Teacher'),

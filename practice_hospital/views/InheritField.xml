@@ -1,0 +1,13 @@
+<odoo>
+    <record id="view_my_teacher_inherit" model="ir.ui.view">
+        <field name="name">my.teacher.inherit.view</field>
+        <field name="model">my.teacher</field>
+        <field name="inherit_id" ref="ohmanegment.view_teacher_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='age']" position="before">
+                <field name="custom_field"/>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>
