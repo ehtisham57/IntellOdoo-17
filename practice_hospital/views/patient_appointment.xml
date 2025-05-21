@@ -63,12 +63,21 @@
         <field name="name">hos.patient.search</field>
         <field name="model">hos.patient</field>
         <field name="arch" type="xml">
-            <search  string="Patient List">
+            <search string="Patient List">
+                <field name="doctor_id" string="search by doctor or patient name"
+                       filter_domain="['|',('doctor_id','ilike',self),('name','ilike',self)]"/>
+
                 <field name="name"/>
                 <field name="age"/>
-                <field name="gender"/>
-                <field name="doctor_id"/>
-                <field name="selected_dr_timing"/>
+                <!--                <field name="gender"/>-->
+                <group expand="1" string="Group By">
+                    <filter string="Gender" name="group_by_gender" context="{'group_by':'gender'}"/>
+                </group>
+                <searchpanel>
+                    <field name="gender" string="Gender" enable_counters="1"/>
+                </searchpanel>
+                <!--                <field name="doctor_id"/>-->
+                <!--                <field name="selected_dr_timing"/>-->
             </search>
         </field>
     </record>
@@ -78,6 +87,7 @@
     <record id="action_patient" model="ir.actions.act_window">
         <field name="name">Patient</field>
         <field name="res_model">hos.patient</field>
+        <field name="search_view_id" ref="view_patient_search"/>
         <field name="view_mode">tree,form</field>
     </record>
 

@@ -62,14 +62,28 @@
         </field>
     </record>
 
+    <!--    search-->
+
     <record id="view_doctor_search" model="ir.ui.view">
-        <field name="name">doctor.search</field>
+        <field name="name">my.doctor.search</field>
         <field name="model">my.doctor</field>
         <field name="arch" type="xml">
             <search string="Search Doctors">
+                <field name="name"/>
+                <field name="age" optional="hide"/>
+                <!--                <field name="gender" optional="hide"/>-->
+                <group expand="1" string="Group By">
+                    <filter string="Gender" name="group_by_gender" context="{'group_by':'gender'}"/>
+                </group>
+                <field name="doctor_timing"/>
+                <field name="patient_ids"/>
+                <field name="specialization_ids"/>
                 <filter name="filter_morning" string="Morning" domain="[('doctor_timing','=','morning')]"/>
+                <!--                <separator/>-->
                 <filter name="filter_evening" string="Evening" domain="[('doctor_timing','=','evening')]"/>
+                <!--                <separator/>-->
                 <filter name="filter_night" string="Night" domain="[('doctor_timing','=','night')]"/>
+
             </search>
         </field>
     </record>
@@ -80,5 +94,6 @@
         <field name="res_model">my.doctor</field>
         <field name="view_mode">tree,form</field>
         <field name="search_view_id" ref="view_doctor_search"/>
+        <field name="context">{'search_default_filter_morning': 1}</field>
     </record>
 </odoo>
