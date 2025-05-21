@@ -14,6 +14,12 @@
               sequence="1"
     />
 
+    <menuitem
+            id="menu_billing"
+            name="Billing Menu"
+            parent="menu_hospital"
+    />
+
     <!--    menu Specialization-->
     <menuitem id="menu_dr_specialization"
               name="Specialization"
@@ -29,5 +35,20 @@
               action="action_doctor"
               sequence="2"
     />
+
+    <menuitem
+            id="menu_invoice"
+            name="Invoice"
+            parent="menu_billing"
+            action="account.action_move_out_invoice_type"
+    />
+
+    <menuitem
+            id="menu_payment"
+            name="Payment"
+            parent="menu_billing"
+            action="account.action_account_payments"
+    />
+
 
 </odoo>

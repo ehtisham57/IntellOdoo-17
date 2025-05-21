@@ -15,6 +15,8 @@
         'views/doctor_views.xml',
         'views/specialization_doctor.xml',
         'views/patient_appointment.xml',
+        'report/patient_report.xml',
+        'report/report_patient_template.xml',
     ],
     'installable': True,
     'application': True,
