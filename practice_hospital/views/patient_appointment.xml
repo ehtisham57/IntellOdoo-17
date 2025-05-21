@@ -58,6 +58,22 @@
         </field>
     </record>
 
+    <!--    search -->
+    <record id="view_patient_search" model="ir.ui.view">
+        <field name="name">hos.patient.search</field>
+        <field name="model">hos.patient</field>
+        <field name="arch" type="xml">
+            <search  string="Patient List">
+                <field name="name"/>
+                <field name="age"/>
+                <field name="gender"/>
+                <field name="doctor_id"/>
+                <field name="selected_dr_timing"/>
+            </search>
+        </field>
+    </record>
+
+
     <!--    action  Patient-->
     <record id="action_patient" model="ir.actions.act_window">
         <field name="name">Patient</field>

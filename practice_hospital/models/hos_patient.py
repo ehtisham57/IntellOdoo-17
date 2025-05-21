@@ -24,7 +24,6 @@ class Patient(models.Model):
 
     def unlink(self):
         for rec in self:
-            if rec.doctor_id.name.lower() == 'jerry':
+            if rec.doctor_id.name == 'jerry':
                 raise UserError("You cannot delete a patient assigned to Dr. Jerry.")
         return super().unlink()
-

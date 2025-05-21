@@ -1,0 +1,18 @@
+<odoo>
+    <record id="view_sale_order_inherit" model="ir.ui.view">
+        <field name="name">sale.order.inherit.view</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="add_Field_one"/>
+                <field name="add_Field_second"/>
+                <field name="customer_id"  options="{'no_create': True}"/>
+            </xpath>
+<!--            <xpath expr="//button[@name='action_cancel']" position="after">-->
+<!--                <button name="action_show_print" type="object" string="Click Here"/>-->
+<!--            </xpath>-->
+
+        </field>
+    </record>
+</odoo>
