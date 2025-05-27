@@ -4,12 +4,17 @@
             <t t-foreach="docs" t-as="doc">
                 <t t-call="web.external_layout">
                     <div class="page">
-                        <h1>Hello</h1>
-                        <h1 t-esc="doc.name"/>
-                        <h1 t-esc="doc.age"/>
-                        <h1 t-esc="doc.gender"/>
-                        <h1 t-esc="doc.doctor_id"/>
-                        <h1 t-esc="doc.selected_dr_timing"/>
+                        <!--                        <h1>Hello</h1>-->
+                        <!--                        <h1 t-esc="doc.name"/>-->
+                        <!--                        <h1 t-esc="doc.age"/>-->
+                        <!--                        <h1 t-esc="doc.gender"/>-->
+                        <!--                        <h1 t-esc="doc.doctor_id"/>-->
+                        <!--                        <h1 t-esc="doc.selected_dr_timing"/>-->
+                        <h1 t-field="doc.name"/>
+                        <h1 t-field="doc.age"/>
+                        <h1 t-field="doc.gender"/>
+                        <h1 t-field="doc.doctor_id.name"/>
+                        <h1 t-field="doc.selected_dr_timing"/>
                     </div>
                 </t>
             </t>

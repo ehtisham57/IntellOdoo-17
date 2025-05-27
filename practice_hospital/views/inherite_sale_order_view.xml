@@ -9,9 +9,9 @@
                 <field name="add_Field_second"/>
                 <field name="customer_id"  options="{'no_create': True}"/>
             </xpath>
-<!--            <xpath expr="//button[@name='action_cancel']" position="after">-->
-<!--                <button name="action_show_print" type="object" string="Click Here"/>-->
-<!--            </xpath>-->
+            <xpath expr="//button[@name='action_cancel']" position="after">
+                <button name="wiz_open" type="object" string="Open Wizard"/>
+            </xpath>
 
         </field>
     </record>

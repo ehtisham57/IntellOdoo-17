@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="sale_order_wizard_form_view_wiz" model="ir.ui.view">
+            <field name="name">sale.order.wizard.form</field>
+            <field name="model">sale.order.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Update Customer">
+                    <sheet>
+                        <group>
+                            <field name="partner_id" options="{'no_create': True}"/>
+                            <field name="order_date"/>
+                            <field name="product_template_id" options="{'no_create': True}"/>
+                            <field name="product_uom_qty"/>
+                            <field name="price_unit"/>
+                            <field name="tax_id" options="{'no_create': True}"/>
+                        </group>
+                    </sheet>
+
+                    <footer>
+                        <button name="action_update_button" type="object" string="update" class="btn-secondary"/>
+                        <button special="cancel" string="cancel" class="btn-primary"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+
+        <!--        action-->
+        <record model="ir.actions.act_window" id="sale_order_wizard_action">
+            <field name="name">Sale Order Wizard</field>
+            <field name="res_model">sale.order.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="sale_order_wizard_form_view_wiz"/>
+            <field name="target">current</field>
+        </record>
+    </data>
+</odoo>
+
