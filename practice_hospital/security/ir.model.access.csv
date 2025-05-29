@@ -1,6 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 
 access_sale_order_wizard,access_sale_order_wizard,model_sale_order_wizard,,1,1,1,1
+access_sale_order_wizard_line,access_sale_order_wizard_lined,model_sale_order_wizard_line,,1,1,1,1
 
 access_specialization_admin,access_specialization_admin,model_doctor_specialization,practice_hospital.group_hospital_admin,1,1,1,1
 access_specialization_doctor,access_specialization_doctor,model_doctor_specialization,practice_hospital.group_hospital_doctor,1,1,0,0

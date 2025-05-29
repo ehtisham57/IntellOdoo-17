@@ -8,8 +8,6 @@ class InheritSaleOrder(models.Model):
     add_Field_second = fields.Char(string="My New Second Field")
     customer_id = fields.Many2one('res.partner', string='Customer')
 
-    # def action_show_print(self):
-    #     print("hello")
     def wiz_open(self):
         return {
             'type': 'ir.actions.act_window',
@@ -18,8 +16,8 @@ class InheritSaleOrder(models.Model):
             'view_mode': 'form',
             'target': 'new',
             'context': {
-                'active_id': self.id,
-                'default_partner_id': self.partner_id.id,
-                'default_order_date': self.date_order,
+                'default_sale_order_id': self.id,
+                # 'default_partner_id': self.partner_id.id,
+                # 'default_order_date': self.date_order,
             },
         }

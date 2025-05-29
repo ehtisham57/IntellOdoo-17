@@ -10,21 +10,28 @@
                         <group>
                             <field name="partner_id" options="{'no_create': True}"/>
                             <field name="order_date"/>
-                            <field name="product_template_id" options="{'no_create': True}"/>
-                            <field name="product_uom_qty"/>
-                            <field name="price_unit"/>
-                            <field name="tax_id" options="{'no_create': True}"/>
                         </group>
+                        <notebook>
+                            <page string="Order Lines">
+                                <field name="product_lines">
+                                    <tree editable="bottom">
+                                        <field name="product_template_id" options="{'no_create': True}"/>
+                                        <field name="product_uom_qty"/>
+                                        <field name="price_unit"/>
+                                        <field name="tax_id" widget="many2many_tags" options="{'no_create': True}"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
                     </sheet>
 
                     <footer>
-                        <button name="action_update_button" type="object" string="update" class="btn-secondary"/>
-                        <button special="cancel" string="cancel" class="btn-primary"/>
+                        <button name="action_add_button" type="object" string="Add Product" class="btn-secondary"/>
+                        <button special="cancel" string="Cancel" class="btn-primary"/>
                     </footer>
                 </form>
             </field>
         </record>
-
 
         <!--        action-->
         <record model="ir.actions.act_window" id="sale_order_wizard_action">
