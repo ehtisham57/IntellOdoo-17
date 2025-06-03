@@ -17,6 +17,7 @@
         'views/patient_appointment.xml',
         'report/patient_report.xml',
         'report/report_patient_template.xml',
+        'report/report_patient_template.xml',
         'wizard/sale_order_wizard.xml'
     ],
     'installable': True,

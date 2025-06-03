@@ -3,7 +3,6 @@
         <record id="report_patient" model="ir.actions.report">
             <field name="name">Patient Detail</field>
             <field name="model">hos.patient</field>
-<!--            <field name="report_type">qweb-html</field>-->
             <field name="report_type">qweb-pdf</field>
             <field name="report_name">practice_hospital.report_patient_template</field>
             <field name="report_file">practice_hospital.report_patient_template</field>

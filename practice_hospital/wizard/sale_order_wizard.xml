@@ -24,7 +24,6 @@
                             </page>
                         </notebook>
                     </sheet>
-
                     <footer>
                         <button name="action_add_button" type="object" string="Add Product" class="btn-secondary"/>
                         <button special="cancel" string="Cancel" class="btn-primary"/>
