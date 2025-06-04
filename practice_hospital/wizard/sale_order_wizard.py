@@ -10,7 +10,7 @@ class SaleOrderWizard(models.TransientModel):
     sale_order_id = fields.Many2one('sale.order', string='Sales Order', ondelete='cascade')
     product_lines = fields.One2many('sale.order.wizard.line', 'line_id', string='Products')
 
-    def action_add_button(self):
+    def action_update_button(self):
         self.ensure_one()
         
         sale_order = self.sale_order_id
