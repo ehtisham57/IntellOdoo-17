@@ -27,3 +27,6 @@ class Patient(models.Model):
             if rec.doctor_id.name == 'jerry':
                 raise UserError("You cannot delete a patient assigned to Dr. Jerry.")
         return super().unlink()
+
+    def print_report(self):
+        return self.env.ref('practice_hospital.report_patient').report_action(self)

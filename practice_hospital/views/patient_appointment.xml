@@ -9,6 +9,7 @@
                 <header>
                     <field name="state" widget="statusbar" statusbar_visible="draft,done,cancel"
                            options="{'clickable': '1'}"/>
+                    <button string="print" type="object" name="print_report" class="btn-primary"/>
                 </header>
                 <sheet>
                     <group>
