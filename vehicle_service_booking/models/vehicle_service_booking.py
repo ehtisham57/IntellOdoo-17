@@ -25,7 +25,7 @@ class Patient(models.Model):
     @api.onchange('price', 'advance')
     def _on_change_amount(self):
         for i in self:
-            i.balance = (i.price or 0) - (i.advance or 0)
+            i.balance = (i.price) - (i.advance)
 
     def unlink(self):
         for rec in self:
