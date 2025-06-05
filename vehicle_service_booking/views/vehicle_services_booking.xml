@@ -7,12 +7,27 @@
         <field name="arch" type="xml">
 
             <form string="Vehicle Services Booking">
+                <header>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,done,cancel"
+                           options="{'clickable': '1'}"/>
+                </header>
                 <sheet>
                     <group>
-                        <field name="customer_id"/>
-                        <field name="vehicle_ids"/>
-                        <field name="preferred_date"/>
-                        <field name="issue_description"/>
+                        <group>
+                            <field name="customer_id" readonly="state == 'done'"/>
+                            <field name="vehicle_ids" readonly="state == 'done'"/>
+                        </group>
+                        <group>
+                            <field name="preferred_date" readonly="state == 'done'"/>
+                            <field name="issue_description" readonly="state == 'done'"/>
+                        </group>
+                        <group>
+                            <field name="price" readonly="state == 'done'"/>
+                            <field name="advance" readonly="state == 'done'"/>
+                        </group>
+                        <group>
+                            <field name="balance" readonly="state == 'done'"/>
+                        </group>
                     </group>
                 </sheet>
             </form>
@@ -29,6 +44,12 @@
                 <field name="vehicle_ids"/>
                 <field name="preferred_date"/>
                 <field name="issue_description"/>
+                <field name="price"/>
+                <field name="advance"/>
+                <field name="balance"/>
+
+                <field name="state" widget="badge"/>
+
             </tree>
         </field>
     </record>

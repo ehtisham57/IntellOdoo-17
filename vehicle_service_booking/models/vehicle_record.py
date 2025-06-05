@@ -7,7 +7,7 @@ class Patient(models.Model):
 
     name = fields.Char(string='Name of vehicle', required=True)
     model = fields.Char(string='Model Of vehicle', required=True)
-    no_plate = fields.Char(string="Registration Plate Number", required=True)
+    no_plate = fields.Char(string="Number Plate", required=True)
     type = fields.Selection([
         ('car', 'Car'),
         ('bike', 'Bike'),
