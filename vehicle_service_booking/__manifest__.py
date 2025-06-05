@@ -7,6 +7,7 @@
     'category': 'Tools',
     'summary': 'Simple practice project',
     'data': [
+        'wizard/vehicle_selection_wizard.xml',
         'views/menu.xml',
         'services/ir.model.access.csv',
         'views/vehicle_customer.xml',

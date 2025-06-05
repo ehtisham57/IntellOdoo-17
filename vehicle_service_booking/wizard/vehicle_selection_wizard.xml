@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="vehicle_selection_wiz" model="ir.ui.view">
+            <field name="name">vehicle.selection.wizard.form</field>
+            <field name="model">vehicle.selection.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Update Customer">
+                    <sheet>
+                        <group>
+                            <field name="vehicle_ids"/>
+                        </group>
+                        <group>
+                            <field name="price"/>
+                            <field name="advance"/>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="action_update_button" type="object" string="Update Product"
+                                class="btn-secondary"/>
+                        <button special="cancel" string="Cancel" class="btn-primary"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!--        action-->
+        <record model="ir.actions.act_window" id="sale_order_wizard_action">
+            <field name="name">Vehicle Selection Wizard</field>
+            <field name="res_model">vehicle.selection.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="vehicle_selection_wiz"/>
+            <field name="target">current</field>
+        </record>
+    </data>
+</odoo>
+

@@ -8,27 +8,28 @@
 
             <form string="Vehicle Services Booking">
                 <header>
+                    <button string="book vehicle" class="btn-primary" type="object" name="open_wizard"/>
                     <field name="state" widget="statusbar" statusbar_visible="draft,done,cancel"
                            options="{'clickable': '1'}"/>
                 </header>
                 <sheet>
                     <group>
-                        <group>
-                            <field name="customer_id" readonly="state == 'done'"/>
-                            <field name="vehicle_ids" readonly="state == 'done'"/>
-                        </group>
-                        <group>
-                            <field name="preferred_date" readonly="state == 'done'"/>
-                            <field name="issue_description" readonly="state == 'done'"/>
-                        </group>
-                        <group>
-                            <field name="price" readonly="state == 'done'"/>
-                            <field name="advance" readonly="state == 'done'"/>
-                        </group>
-                        <group>
-                            <field name="balance" readonly="state == 'done'"/>
-                        </group>
+                        <field name="customer_id" readonly="state == 'done'" options="{'no_create': True}"/>
+                        <field name="preferred_date" readonly="state == 'done'"/>
+                        <field name="issue_description" readonly="state == 'done'"/>
                     </group>
+                    <notebook>
+                        <page string="Amount">
+                            <group>
+                                <field name="price" readonly="state == 'done'"/>
+                                <field name="advance" readonly="state == 'done'"/>
+                                <field name="balance" readonly="1"/>
+                                </group>
+                        </page>
+                        <page string="Select Vehicle">
+                            <field name="vehicle_ids" readonly="state == 'done'"/>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>

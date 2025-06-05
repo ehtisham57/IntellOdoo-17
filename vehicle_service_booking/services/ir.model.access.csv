@@ -2,3 +2,4 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_vehicle_customer,vehicle.customer,model_vehicle_customer,,1,1,1,1
 access_vehicle_record,vehicle.record,model_vehicle_record,,1,1,1,1
 access_vehicle_service_booking,vehicle.service.booking,model_vehicle_service_booking,,1,1,1,1
+access_vehicle_selection_wizard,vehicle.selection.wizard,model_vehicle_selection_wizard,,1,1,1,1

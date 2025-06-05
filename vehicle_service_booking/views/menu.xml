@@ -2,7 +2,7 @@
 <odoo>
     <!-- Main parent menu -->
     <menuitem id="menu_vehicle_services"
-              name="Vehicle Services"
+              name="Vehicle Booking Services"
     />
 
     <!--    menu vehicle booking-->
