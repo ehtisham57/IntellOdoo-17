@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Form View -->
+    <record id="view_vehicle_record_form" model="ir.ui.view">
+        <field name="name">vehicle.record.form</field>
+        <field name="model">vehicle.record</field>
+        <field name="arch" type="xml">
+            <form string="Vehicle Record">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="model"/>
+                        <field name="no_plate"/>
+                        <field name="type"/>
+                        <field name="model_year"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree View -->
+    <record id="view_vehicle_record_tree" model="ir.ui.view">
+        <field name="name">vehicle.record.tree</field>
+        <field name="model">vehicle.record</field>
+        <field name="arch" type="xml">
+            <tree string="Vehicle Record">
+                <field name="name"/>
+                <field name="model"/>
+                <field name="no_plate"/>
+                <field name="type"/>
+                <field name="model_year"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action for the vehicle.record model -->
+    <record id="action_vehicle_record" model="ir.actions.act_window">
+        <field name="name">Vehicle Services</field>
+        <field name="res_model">vehicle.record</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+</odoo>

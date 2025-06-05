@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!--    form -->
+    <record id="view_vehicle_services_booking_form" model="ir.ui.view">
+        <field name="name">vehicle.services.booking.form</field>
+        <field name="model">vehicle.service.booking</field>
+        <field name="arch" type="xml">
+
+            <form string="Vehicle Services Booking">
+                <sheet>
+                    <group>
+                        <field name="customer_id"/>
+                        <field name="vehicle_ids"/>
+                        <field name="preferred_date"/>
+                        <field name="issue_description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!--    tree -->
+    <record id="view_services_booking_tree" model="ir.ui.view">
+        <field name="name">vehicle.service.booking.tree</field>
+        <field name="model">vehicle.service.booking</field>
+        <field name="arch" type="xml">
+            <tree string="Vehicle Services booking">
+                <field name="customer_id"/>
+                <field name="vehicle_ids"/>
+                <field name="preferred_date"/>
+                <field name="issue_description"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <!--  main Vehicle Services  action -->
+    <record id="action_vehicle_service_booking" model="ir.actions.act_window">
+        <field name="name">Vehicle Booking</field>
+        <field name="res_model">vehicle.service.booking</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

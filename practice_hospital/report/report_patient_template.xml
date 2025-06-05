@@ -41,7 +41,7 @@
                             </tr>
                             <tr>
                                 <td><strong>Time</strong> <t t-esc="doc.selected_dr_timing"/></td>
-                                <td><strong>Stat Of Patient</strong> <t t-esc="doc.state"/></td>
+                                <td><strong>State Of Patient</strong> <t t-esc="doc.state"/></td>
                             </tr>
                         </table>
                     </div>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Main parent menu -->
+    <menuitem id="menu_vehicle_services"
+              name="Vehicle Services"
+    />
+
+    <!-- Submenu for customer -->
+    <menuitem id="menu_vehicle_customer"
+              name="Customer"
+              parent="menu_vehicle_services"
+              action="action_vehicle_customer"
+              sequence="1"
+    />
+    <!-- Submenu for services -->
+    <menuitem id="menu_vehicle_record"
+              name="Vehicle"
+              parent="menu_vehicle_services"
+              action="action_vehicle_record"
+              sequence="2"
+    />
+
+    <!--    menu vehicle vehicle-->
+    <menuitem id="menu_vehicle_service_booking"
+              name="Booking"
+              parent="menu_vehicle_services"
+              action="action_vehicle_service_booking"
+              sequence="3"
+
+    />
+</odoo>
